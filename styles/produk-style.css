@@ -1,0 +1,181 @@
+body {
+  margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+}
+
+
+ .header-logo {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.main-header a {
+  text-decoration: none;
+  color: #000;
+}
+
+
+
+.main-header a {
+  text-decoration: none;
+  color: #000;
+  position: relative; 
+}
+
+.main-header a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; 
+  width: 100%;
+  height: 2px;
+  background: #964B00 ;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease;
+}
+
+.main-header a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+
+.main-header a::before{
+  background: #964B00;
+  transform-origin: 100% 50%;
+}
+
+.nav-mid a,
+.nav-right a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  display: block;
+  position: relative
+}
+
+
+.main-header li{
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.announcement-bar {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #f5f5f5;
+  color: #000;
+  font-size: 14px;
+  padding: 8px 0;
+  position: relative;
+}
+
+.scroll-text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 8s linear infinite;
+  font-family: Helvetica, sans-serif;
+}
+
+.produk-sale {
+    text-align: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.produk-sale h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    text-align: left;
+}
+
+.produk-sale {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 25px;
+}
+
+.produk-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #eee;
+    padding-bottom: 20px;
+    background-color: #fff;
+}
+
+.produk-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 0;
+    margin-bottom: 15px;
+}
+
+.produk-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+}
+
+.produk-card .price {
+    margin: 0 0 15px 0;
+    font-size: 1.1em;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #888;
+    margin-left: 8px;
+}
+
+.add-to-cart {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #333;
+}
+
+@media (min-width: 600px) {
+    .produk-sale {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .produk-sale {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
