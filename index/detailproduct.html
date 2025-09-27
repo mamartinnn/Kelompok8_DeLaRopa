@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De La Rropa - Detail Produk</title>
+    <link rel="stylesheet" href="../styles/detail-style.css">
+</head>
+<body>
+    <header class="main-header">    
+        <a href="index.html" class ="header-logo">De la ropa </a>
+        <nav class="nav-mid">
+         <ul>
+             <li><a href="products.html">Products</a></li>
+         </ul>
+        </nav>
+         <nav class ="nav-right">
+             <ul>
+                 <li><a href="myAccount.html">my account </a></li>
+                 <li><a href="shoppingCart.html">shopping cart</a></li>
+             </ul>
+         </nav>
+    </header>
+
+    <div class="announcement-bar">
+        <div class="scroll-text">Free Shipping to Indonesia + Singapore!</div>
+    </div>
+
+    <main class="detail-container">
+        <div class="product-gallery">
+            <input type="radio" name="slider-radio" id="slide1" checked>
+            <input type="radio" name="slider-radio" id="slide2">
+            <input type="radio" name="slider-radio" id="slide3">
+            <input type="radio" name="slider-radio" id="slide4">
+            
+            <div class="product-images">
+                <img src="../images/baju-a.png" alt="Product Image 1">
+                <img src="../images/baju-a.png" alt="Product Image 2">
+                <img src="../images/baju-a.png" alt="Product Image 3">
+                <img src="../images/baju-a.png" alt="Product Image 4">
+            </div>
+            
+            <div class="image-slider-nav">
+                <label for="slide1" class="nav-dot"><span class="sr-only">Go to Image 1</span></label>
+                <label for="slide2" class="nav-dot"><span class="sr-only">Go to Image 2</span></label>
+                <label for="slide3" class="nav-dot"><span class="sr-only">Go to Image 3</span></label>
+                <label for="slide4" class="nav-dot"><span class="sr-only">Go to Image 4</span></label>
+            </div>
+        </div>
+        <div class="product-info">
+            <h2>BAJU A</h2>
+            <p class="price">$29.99 <span class="original-price">$49.99</span></p>
+
+            <div class="size-selection">
+                <h3>Ukuran</h3>
+                <div class="size-buttons">
+                    <button>S</button>
+                    <button class="active">M</button>
+                    <button>L</button>
+                    <button>XL</button>
+                </div>
+            </div>
+            
+            <a href="shoppingCart.html" class="add-to-cart">Add to Cart</a>
+
+            <div class="product-description">
+                <h3>Material & Care</h3>
+                <p>Terbuat dari 100% premium combed cotton yang lembut dan sejuk. Cuci dengan mesin menggunakan air dingin, jangan gunakan pemutih, dan setrika dengan suhu rendah.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
