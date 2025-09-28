@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   margin: 0;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -91,32 +97,50 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 .produk-sale {
-    text-align: center;
     padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .produk-sale h2 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 2em;
     text-align: left;
 }
 
-.produk-sale {
+.produk-container {
     display: grid;
-    grid-template-columns: 1fr; 
-    gap: 25px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 .produk-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
     border: 1px solid #eee;
-    padding-bottom: 20px;
     background-color: #fff;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.produk-card:hover {
+    transform: translateY(-5px);
+}
+
+.produk-image-link {
+    text-decoration: none;
+    color: inherit;
+    flex-grow: 1;
 }
 
 .produk-card img {
@@ -124,18 +148,16 @@ body {
     height: auto;
     aspect-ratio: 3 / 4;
     object-fit: cover;
-    border-radius: 0;
-    margin-bottom: 15px;
+}
+
+.produk-card h3, .produk-card .price {
+    margin: 0;
+    padding: 10px 15px 0 15px;
 }
 
 .produk-card h3 {
-    margin: 0 0 10px 0;
     font-size: 1.2em;
-}
-
-.produk-card .price {
-    margin: 0 0 15px 0;
-    font-size: 1.1em;
+    margin-top: 10px;
 }
 
 .original-price {
@@ -152,30 +174,22 @@ body {
     cursor: pointer;
     text-transform: uppercase;
     transition: background-color 0.3s ease;
+    text-align: center;
+    margin: 15px;
+    text-decoration: none;
 }
 
 .add-to-cart:hover {
     background-color: #333;
 }
 
-@media (min-width: 600px) {
-    .produk-sale {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 @media (min-width: 992px) {
-    .produk-sale {
+    .produk-container {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
 @keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
 }
-
