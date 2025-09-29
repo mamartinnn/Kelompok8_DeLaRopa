@@ -100,13 +100,13 @@ main{
     align-content: center;
 }
 
-.signup-container {
+.container {
     max-width: 400px;
     padding: 20px;
     width: 100%;
 }
 
-h1 {
+h2 {
     font-weight: 300;
     font-size: 2.5em;
     margin-bottom: 40px;
@@ -160,6 +160,22 @@ label {
 .btn-register:hover {
     background-color: #333;
     color: #fff;
+}
+
+.forgot {
+    text-align: right; 
+    margin-top: -10px;
+    margin-bottom: 20px; 
+}
+
+.forgot a {
+    font-size: 0.8em;
+    color: #555;
+    text-decoration: none;
+}
+
+.forgot a:hover {
+    text-decoration: underline;
 }
 
 @keyframes scroll-left {
