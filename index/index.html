@@ -7,13 +7,13 @@
     </title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
-<body>
+<body class="no-scroll">
     <header class="main-header">    
        <a href="index.html" class ="header-logo">De la ropa </a>
 
        <nav class="nav-mid">
         <ul>
-            <li><a href="products.html">Products</a></li>
+            <li><a href="Product.html">Products</a></li>
         </ul>
 
        </nav>
@@ -37,13 +37,20 @@
   <div class="wm-hero__inner container">
     <h1>Your one-stop-shop for<br>fashionable clothing</h1>
     <img src="../img/Kantor1.jpeg" alt="Random cover album" width="960" height="600" />
+    <a href="Product.html" class="hero-button">See Our Product </a>
+    
   </div>
 </section>
 
   
 </section>
 
-
+<script src="../script/script.js"></script>
+<script>
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
+</script>
 
 </body>
 </html>

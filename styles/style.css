@@ -159,9 +159,9 @@ body {
     display: block;
     object-fit: cover;
     margin: 0 auto;
-    max-width: 100%;
+    max-width: 60%;
     height: auto;
-    border-radius: 1em 1em 0 0;
+    border-radius: 1em 1em 1em 1em;
     transform: translateY(100%);
     animation: loadImg var(--duration2) var(--easing) var(--delay2) forwards;
   }
@@ -184,13 +184,82 @@ body {
 }
 
 
-@keyframes loadImg {
+@keyframes loadBtn {
   0% {
+    opacity: 0;
     transform: translateY(100%);
   }
   100% {
-    transform: none; 
+    opacity: 1;
+    transform: none;
   }
 }
 
 
+
+.hero-button {
+ align-items: center;
+  background-color: #fff;
+  border: 2px solid #000;
+  box-sizing: border-box;
+  color: #000;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  margin : 40px auto;
+  
+  touch-action: manipulation;
+   animation: loadBtn var(--duration2) var(--easing) var(--delay2) forwards;
+   font:  Helvetica, sans-serif;
+}
+
+.hero-button:hover {
+  border-color: #964B00;
+  color: #964B00;
+  fill: #964B00;
+}
+
+.hero-button:active {
+  
+  border-color: #964B00;
+  color: #964B00;
+  fill: #964B00;
+}
+
+
+@media (min-width: 768px) {
+  .hero-button {
+    min-width: 120px;
+    padding: 0 25px;
+  } 
+}
+
+@keyframes loadImg {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: none; 
+    opacity: 1;
+  }
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
