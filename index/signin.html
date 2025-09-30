@@ -4,109 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign In - Marketplace</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", sans-serif;
-      background: #fff;
-      color: #111;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-      border-bottom: 1px solid #e5e5e5;
-    }
-    header .logo {
-      font-weight: bold;
-      font-size: 1.2rem;
-    }
-    header nav a {
-      margin-left: 1.5rem;
-      text-decoration: none;
-      color: #111;
-      font-size: 0.95rem;
-    }
-    .container {
-      max-width: 600px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-    }
-    h2 {
-      font-size: 2rem;
-      font-weight: bold;
-      margin-bottom: 2rem;
-    }
-    .form-control {
-      margin-bottom: 1.5rem;
-    }
-    .form-control label {
-      display: block;
-      font-size: 0.95rem;
-      margin-bottom: 0.4rem;
-    }
-    .form-control input {
-      width: 100%;
-      padding: 0.8rem;
-      border: none;
-      border-bottom: 1px solid #ccc;
-      font-size: 1rem;
-      outline: none;
-    }
-    .form-control input:focus {
-      border-bottom: 1px solid #111;
-    }
-    .forgot {
-      font-size: 0.9rem;
-      margin-top: -0.8rem;
-      margin-bottom: 1.5rem;
-    }
-    .forgot a {
-      text-decoration: none;
-      color: #111;
-    }
-    .btn {
-      display: block;
-      width: 100%;
-      padding: 0.8rem;
-      border: 1px solid #111;
-      background: #fff;
-      color: #111;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .btn:hover {
-      background: #111;
-      color: #fff;
-    }
-  </style>
+  <link rel="stylesheet" href="../styles/signin-style.css">
 </head>
-<body>
-  <header>
-    <div class="logo">DE LA ROPA</div>
-    <nav>
-      <a href="#">Products</a>
-      <a href="#">my account</a>
-      <a href="#">shopping cart</a>
-    </nav>
-  </header>
+  <body>
+    <header class="main-header">    
+       <a href="index.html" class ="header-logo">De la ropa </a>
 
-  <div class="container">
-    <h2>Sign In</h2>
-    <form>
-      <div class="form-control">
-        <label>Username *</label>
-        <input type="text" placeholder="Enter your username" required>
+       <nav class="nav-mid">
+        <ul>
+            <li><a href="products.html">Products</a></li>
+        </ul>
+
+       </nav>
+        <nav class ="nav-right">
+            <ul>
+                <li><a href="myAccount.html">my account </a></li>
+                <li><a href="shoppingCart.html">shopping cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="announcement-bar">
+        <div class="scroll-text">Free Shipping to Indonesia + Singapore!</div>
+    </div>
+
+    <main>
+      <div class="container">
+        <h2>Sign In</h2>
+        <form>
+          <div class="form-group">
+                    <label for="username">Username <span class="bintang">*</span></label>
+                    <input type="text" id="username" name="username" class="form-input" required>
+          </div>
+          <div class="form-group">
+                    <label for="password">Password <span class="bintang">*</span></label>
+                    <input type="password" id="password" name="password" class="form-input" required>
+          </div>
+          <div class="form-group">
+                    <p class="forgot"><a href="">Forgot your password?</a></p>
+          </div>
+
+          <button class="btn-register" type="submit">Login</button>
+
+        </form>
       </div>
-      <div class="form-control">
-        <label>Password *</label>
-        <input type="password" placeholder="Enter your password" required>
-      </div>
-      <p class="forgot"><a href="#">Forgot your password?</a></p>
-      <button class="btn" type="submit">Login</button>
-    </form>
-  </div>
-</body>
+    </main>
+  </body>
 </html>
