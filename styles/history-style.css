@@ -136,3 +136,51 @@ h1 {
 }
 
 .status-completed { background-color: #28a745; }
+
+.order-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: #fafafa;
+    border-top: 1px solid #eee;
+}
+
+.total-price {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.order-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* --- Tombol Aksi --- */
+.btn {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: #333;
+    color: #fff;
+}
+.btn-primary:hover {
+    background-color: #555;
+}
+
+.btn-secondary {
+    background-color: #fff;
+    color: #333;
+    border-color: #ddd;
+}
+.btn-secondary:hover {
+    background-color: #f8f8f8;
+    border-color: #ccc;
+}
