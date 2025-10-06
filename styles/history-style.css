@@ -126,3 +126,13 @@ h1 {
     font-size: 0.8rem;
     color: #777;
 }
+
+.order-status {
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.status-completed { background-color: #28a745; }
