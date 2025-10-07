@@ -244,7 +244,7 @@ html, body {
 .featured-products {
   padding: 60px 20px;
   text-align: center;
-  background: url('../img/bg-tas.jpg') center/cover no-repeat;
+  background: url('../img/testtt.jpg') center/cover no-repeat;
   position: relative;
   color: #fff;
 }
@@ -385,6 +385,61 @@ body.no-scroll {
 }
 
 
+.fade-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.testimonials {
+  padding: 60px 20px;
+  background:#d8cfc4;
+  color: #eee;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  font-weight: 600;
+  color: #111;
+}
+
+.testimonial-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.testimonial {
+  max-width: 300px;
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  font-style: italic;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Fade-in animation */
 .fade-section {
   opacity: 0;
   transform: translateY(30px);
