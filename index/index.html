@@ -1,56 +1,140 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>De La Ropa
-    </title>
-    <link rel="stylesheet" href="../styles/style.css">
-</head>
-<body class="no-scroll">
-    <header class="main-header">    
-       <a href="index.html" class ="header-logo">De la ropa </a>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>De La Ropa
+      </title>
+      <link rel="stylesheet" href="../styles/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-       <nav class="nav-mid">
-        <ul>
-            <li><a href="Product.html">Products</a></li>
-        </ul>
 
-       </nav>
-        <nav class ="nav-right">
-            <ul>
-                <li><a href="myAccount.html">my account </a></li>
-                <li><a href="shoppingCart.html">shopping cart</a></li>
-            </ul>
+  </head>
+  <body class="no-scroll">
+      <header class="main-header">    
+        <a href="index.html" class ="header-logo">De la ropa </a>
+
+        <nav class="nav-mid">
+          <ul>
+              <li><a href="Product.html">Products</a></li>
+          </ul>
+
         </nav>
-    </header>
+          <nav class ="nav-right">
+              <ul>
+                  <li><a href="myAccount.html">my account </a></li>
+                  <li><a href="shoppingCart.html">shopping cart</a></li>
+              </ul>
+          </nav>
+      </header>
 
-     <div class="announcement-bar">
-  <div class="scroll-text">Free Shipping to Indonesia + Singapore!</div>
-    </div>
+      <div class="announcement-bar">
+    <div class="scroll-text">Free Shipping to Indonesia + Singapore!</div>
+      </div>
 
-   <section class="hero">
+    <section class="hero">
 
-   
-
-  <section class="wm-hero js-animate">
-  <div class="wm-hero__inner container">
-    <h1>Your one-stop-shop for<br>fashionable clothing</h1>
-    <img src="../img/Kantor1.jpeg" alt="Random cover album" width="960" height="600" />
-    <a href="Product.html" class="hero-button">See Our Product </a>
     
+
+    <section class="wm-hero js-animate">
+    <div class="wm-hero__inner container">
+      <h1>Your one-stop-shop for<br>fashionable clothing</h1>
+      <img src="../img/Kantor1.jpeg" alt="Random cover album" width="960" height="600" />
+      <a href="Product.html" class="hero-button">See Our Product </a>
+      
+    </div>
+  </section>
+
+    
+  </section>
+
+<section class="featured-products fade-section">
+  <h2>Best Sellers</h2>
+  <div class="carousel">
+    <button class="carousel-btn prev">&#10094;</button>
+    <div class="carousel-track">
+      <div class="product-card">
+        <img src="../img/Kantor1.jpeg" alt="Classic White Shirt">
+        <h3>Classic White Shirt</h3>
+        <p>$49.00</p>
+      </div>
+      <div class="product-card">
+        <img src="../img/testtt.jpg" alt="Linen Summer Dress">
+        <h3>Linen Summer Dress</h3>
+        <p>$89.00</p>
+      </div>
+      <div class="product-card">
+        <img src="../img/Kantor1.jpeg" alt="Tailored Blazer">
+        <h3>Tailored Blazer</h3>
+        <p>$129.00</p>
+      </div>
+    </div>
+    <button class="carousel-btn next">&#10095;</button>
   </div>
 </section>
 
-  
-</section>
 
-<script src="../script/script.js"></script>
-<script>
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  };
-</script>
 
-</body>
-</html>
+
+
+
+
+  <footer class="footer">
+    <div class="footer-content">
+      <h2>De La Ropa</h2>
+      <p>Your one-stop-shop for fashionable clothing</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+      </div>
+      <p class="copyright">&copy; 2025 De La Ropa. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    window.addEventListener('scroll', function () {
+      const footer = document.querySelector('.featured-products');
+      const rect = footer.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        footer.classList.add('show');
+      }
+    });
+  </script>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      const footer = document.querySelector('.footer');
+      const rect = footer.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        footer.classList.add('show');
+      }
+    });
+  </script>
+
+  <script>
+    const fadeSections = document.querySelectorAll('.fade-section');
+
+    function checkFade() {
+      fadeSections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          section.classList.add('show');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkFade);
+    window.addEventListener('load', checkFade);
+  </script>
+
+
+  <script src="../script/script.js"></script>
+  <script>
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    };
+  </script>
+
+  </body>
+  </html>
