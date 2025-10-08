@@ -99,7 +99,7 @@ h1 {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     margin-bottom: 2rem;
-    overflow: hidden; /* Agar border-radius bekerja dengan baik */
+    overflow: hidden;
 }
 
 .order-header {
@@ -136,6 +136,45 @@ h1 {
 }
 
 .status-completed { background-color: #28a745; }
+.status-shipped { background-color: #007bff; }
+.status-cancelled { background-color: #dc3545; }
+.status-processing { background-color: #ffc107; color: #333; }
+
+
+.order-body {
+    padding: 1rem 1.5rem;
+}
+
+.order-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+.order-item:last-child {
+    margin-bottom: 0;
+}
+
+.order-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 1rem;
+}
+
+.item-details h4 {
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+.item-details p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.item-price {
+    margin-left: auto;
+    font-weight: 600;
+}
 
 .order-footer {
     display: flex;
