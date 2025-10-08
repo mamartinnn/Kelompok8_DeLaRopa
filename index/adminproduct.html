@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>De La Ropa</title>
-    <link rel="stylesheet" href="../styles/product-style.css">
+    <title>Admin - De La Ropa</title>
+    <link rel="stylesheet" href="/styles/adminproduct.css">
 </head>
 <body>
     <header class="main-header">    
-        <a href="index.html" class ="header-logo">De la ropa </a>
+        <a href="index.html" class ="header-logo">De la ropa</a>
         <nav class="nav-mid">
-         <ul>
-             <li><a href="products.html">Products</a></li>
-         </ul>
+          <ul>
+                <li><a href="Product.html">Products</a></li>
+          </ul>
         </nav>
-         <nav class ="nav-right">
-             <ul>
-                 <li><a href="myAccount.html">my account </a></li>
-                 <li><a href="/Kelompok8_DeLaRopa/index/wishlist.html">shopping cart</a></li>
-             </ul>
-         </nav>
+          <nav class ="nav-right">
+                <ul>
+                    <li><a href="myAccount.html">my account </a></li>
+                    <li><a href="/Kelompok8_DeLaRopa/index/wishlist.html">shopping cart</a></li>
+                </ul>
+          </nav>
     </header>
 
     <div class="announcement-bar">
@@ -27,16 +27,26 @@
     </div>
 
     <div class="produk-sale">
-        <h2>Our Products on Sale</h2>
+        <h2>Manage Products</h2>
         
         <div class="produk-container">
+            
+            <div class="produk-card add-new-card">
+                <a href="tambahdetail.html" class="add-new-link">
+                    <div class="add-new-content">
+                        <span class="plus-sign">+</span>
+                        <p>Add New Product</p>
+                    </div>
+                </a>
+            </div>
+
             <div class="produk-card">
                 <a href="detailproduct.html" class="produk-image-link">
                     <img src="../images/baju-a.png" alt="Sale Product 1">
                     <h3>BAJU A</h3>
                     <p class="price"> $29.99 <span class="original-price">$49.99</span></p>
                 </a>
-                <a href="/index/wishlist.html" class="add-to-cart">Add to Cart</a>
+                <a href="/index/wishlist.html" class="add-to-cart">Edit Product</a>
             </div>
             <div class="produk-card">
                 <a href="detailproduct.html" class="produk-image-link">
@@ -44,7 +54,7 @@
                     <h3>BAJU B</h3>
                     <p class="price"> $19.99 <span class="original-price">$39.99</span></p>
                 </a>
-                <a href="/index/wishlist.html" class="add-to-cart">Add to Cart</a>
+                <a href="/index/wishlist.html" class="add-to-cart">Edit Product</a>
             </div>
             <div class="produk-card">
                 <a href="detailproduct.html" class="produk-image-link">
@@ -52,7 +62,7 @@
                     <h3>BAJU C</h3>
                     <p class="price"> $34.99 <span class="original-price">$59.99</span></p>
                 </a>
-                <a href="/index/wishlist.html" class="add-to-cart">Add to Cart</a>
+                <a href="/index/wishlist.html" class="add-to-cart">Edit Product</a>
             </div>
             <div class="produk-card">
                 <a href="detailproduct.html" class="produk-image-link">
@@ -60,7 +70,7 @@
                     <h3>BAJU D</h3>
                     <p class="price"> $79.99 <span class="original-price">$129.99</span></p>
                 </a>
-                <a href="/index/wishlist.html" class="add-to-cart">Add to Cart</a>
+                <a href="/index/wishlist.html" class="add-to-cart">Edit Product</a>
             </div>
             <div class="produk-card">
                 <a href="detailproduct.html" class="produk-image-link">
@@ -68,7 +78,7 @@
                     <h3>BAJU E</h3>
                     <p class="price"> $120.99 <span class="original-price">$349.65</span></p>
                 </a>
-                <a href="/index/wishlist.html" class="add-to-cart">Add to Cart</a>
+                <a href="/index/wishlist.html" class="add-to-cart">Edit Product</a>
             </div>
         </div>
     </div>
@@ -85,49 +95,10 @@
       <p class="copyright">&copy; 2025 De La Ropa. All rights reserved.</p>
     </div>
   </footer>
-  <script>
-    window.addEventListener('scroll', function () {
-      const footer = document.querySelector('.featured-products');
-      const rect = footer.getBoundingClientRect();
-      if (rect.top < window.innerHeight) {
-        footer.classList.add('show');
-      }
-    });
-  </script>
 
   <script>
-    window.addEventListener('scroll', function () {
-      const footer = document.querySelector('.footer');
-      const rect = footer.getBoundingClientRect();
-      if (rect.top < window.innerHeight) {
-        footer.classList.add('show');
-      }
-    });
+    // Note: No new JavaScript is needed for the "Add Product" link to work.
+    // The <a> tag handles the navigation to 'tambahdetail.html' perfectly.
   </script>
-
-  <script>
-    const fadeSections = document.querySelectorAll('.fade-section');
-
-    function checkFade() {
-      fadeSections.forEach(section => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          section.classList.add('show');
-        }
-      });
-    }
-
-    window.addEventListener('scroll', checkFade);
-    window.addEventListener('load', checkFade);
-  </script>
-
-
-  <script src="../script/script.js"></script>
-  <script>
-    window.onbeforeunload = function () {
-      window.scrollTo(0, 0);
-    };
-  </script>
-  
 </body>
 </html>
