@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/profile.css">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+
+     <header class="main-header">    
+        <a href="index.html" class ="header-logo">De la ropa </a>
+
+        <nav class="nav-mid">
+          <ul>
+              <li><a href="Product.html">Products</a></li>
+          </ul>
+
+        </nav>
+          <nav class ="nav-right">
+              <ul>
+                  <li><a href="myAccount.html">my account </a></li>
+                  <li><a href="shoppingCart.html">shopping cart</a></li>
+              </ul>
+          </nav>
+      </header>
+
+      <div class="announcement-bar">
+    <div class="scroll-text">Free Shipping to Indonesia + Singapore!</div>
+      </div>
+
+    <section class="account-section fade-section">
+
+    
+
+  <div class="container account-wrapper">
+    <h2>Welcome Back, Martin</h2>
+
+    <div class="account-info">
+      <img src="../img/RobloxScreenShot20250924_171224509.png" alt="User Avatar" class="avatar">
+      <div class="details">
+        <p><strong>Email:</strong> martin@example.com</p>
+        <p><strong>Member Since:</strong> January 2024</p>
+        <button class="edit-btn">Edit Profile</button>
+      </div>
+    </div>
+
+    <div class="order-history">
+      <h3>Your Orders</h3>
+      <ul>
+        <li>
+          <span>#DLR-1023</span>
+          <span>Tailored Blazer</span>
+          <span>$129.00</span>
+          <span>Delivered</span>
+        </li>
+        <li>
+          <span>#DLR-1018</span>
+          <span>Linen Summer Dress</span>
+          <span>$89.00</span>
+          <span>Delivered</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+ <footer class="footer">
+    <div class="footer-content">
+      <h2>De La Ropa</h2>
+      <p>Your one-stop-shop for fashionable clothing</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+      </div>
+      <p class="copyright">&copy; 2025 De La Ropa. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+
+<script>
+  const fadeSections = document.querySelectorAll('.fade-section,.footer');
+
+  function checkFade() {
+    fadeSections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        section.classList.add('show');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkFade);
+  window.addEventListener('load', checkFade);
+</script>
+
+
+
+</body>
+</html>

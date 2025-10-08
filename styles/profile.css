@@ -1,0 +1,87 @@
+.account-section {
+  padding: 60px 20px;
+  background: #f5f5f5;
+  color: #333;
+}
+
+.account-wrapper {
+  max-width: 800px;
+  margin: auto;
+}
+
+.account-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.account-info {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 40px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.details p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.edit-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #964B00;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.edit-btn:hover {
+  background: #6e3700;
+}
+
+.order-history h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.order-history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.order-history li {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Fade-in animation */
+.fade-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
