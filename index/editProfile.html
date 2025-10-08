@@ -17,8 +17,8 @@
     </nav>
     <nav class="nav-right">
       <ul>
-        <li><a href="myAccount.html">My Account</a></li>
-        <li><a href="shoppingCart.html">Shopping Cart</a></li>
+        <li><a href="profile.html">My Account</a></li>
+        <li><a href="wishlist.html">Shopping Cart</a></li>
       </ul>
     </nav>
   </header>
@@ -71,6 +71,18 @@
     }
     window.addEventListener('scroll', checkFade);
     window.addEventListener('load', checkFade);
+    
+    document.getElementById('avatar').addEventListener('change', function(event) {
+  const file = event.target.files[0];
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      document.getElementById('avatarPreview').src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
+});
+
   </script>
 
 </body>

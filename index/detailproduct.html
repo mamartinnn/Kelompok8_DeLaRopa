@@ -11,12 +11,12 @@
         <a href="index.html" class ="header-logo">De la ropa </a>
         <nav class="nav-mid">
          <ul>
-             <li><a href="products.html">Products</a></li>
+             <li><a href="Product.html">Products</a></li>
          </ul>
         </nav>
          <nav class ="nav-right">
              <ul>
-                 <li><a href="myAccount.html">my account </a></li>
+                 <li><a href="profile.html">my account </a></li>
                  <li><a href="wishlist.html">shopping cart</a></li>
              </ul>
          </nav>
@@ -61,7 +61,7 @@
                 </div>
             </div>
 
-            <a href="/Kelompok8_DeLaRopa/index/wishlist.html" class="add-to-cart">Add to Cart</a>
+            <a href="/index/wishlist.html" class="add-to-cart">Add to Cart</a>
 
             <div class="product-description">
                 <h3>Material & Care</h3>
@@ -69,5 +69,62 @@
             </div>
         </div>
     </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <h2>De La Ropa</h2>
+      <p>Your one-stop-shop for fashionable clothing</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+      </div>
+      <p class="copyright">&copy; 2025 De La Ropa. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    window.addEventListener('scroll', function () {
+      const footer = document.querySelector('.featured-products');
+      const rect = footer.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        footer.classList.add('show');
+      }
+    });
+  </script>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      const footer = document.querySelector('.footer');
+      const rect = footer.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        footer.classList.add('show');
+      }
+    });
+  </script>
+
+  <script>
+    const fadeSections = document.querySelectorAll('.fade-section');
+
+    function checkFade() {
+      fadeSections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          section.classList.add('show');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkFade);
+    window.addEventListener('load', checkFade);
+  </script>
+
+
+  <script src="../script/script.js"></script>
+  <script>
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    };
+  </script>
+  
 </body>
 </html>

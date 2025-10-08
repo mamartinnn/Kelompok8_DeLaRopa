@@ -7,7 +7,6 @@
 body {
   margin: 0;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-
 }
 
 
@@ -182,6 +181,48 @@ body {
 .add-to-cart:hover {
     background-color: #333;
 }
+
+/* --- NEW STYLES FOR ADMIN PAGE --- */
+
+.add-new-card {
+    border: 2px dashed #ccc;
+    background-color: #f9f9f9;
+    min-height: 350px; /* Adjust height to match other cards if needed */
+}
+
+.add-new-card:hover {
+    transform: translateY(0); /* Override the hover effect for this specific card */
+    background-color: #f0f0f0;
+    border-color: #999;
+}
+
+.add-new-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #555;
+}
+
+.add-new-content {
+    text-align: center;
+}
+
+.add-new-content .plus-sign {
+    font-size: 4em;
+    font-weight: 200;
+    line-height: 1;
+}
+
+.add-new-content p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* --- END OF NEW STYLES --- */
 
 .footer {
   background-color: hsl(0, 0%, 7%);
