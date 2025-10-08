@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Payment - Marketplace</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: "Segoe UI", sans-serif;
+      font-family: "Poppins", sans-serif;
       background: #fff;
       color: #111;
     }
@@ -27,6 +28,10 @@
       text-decoration: none;
       color: #111;
       font-size: 0.95rem;
+      transition: 0.2s;
+    }
+    header nav a:hover {
+      color: #555;
     }
     .container {
       max-width: 700px;
@@ -35,7 +40,7 @@
     }
     h2 {
       font-size: 2rem;
-      font-weight: bold;
+      font-weight: 600;
       margin-bottom: 2rem;
     }
     .product {
@@ -105,11 +110,13 @@
 </head>
 <body>
   <header>
-    <div class="logo">DE LA ROPA</div>
+    <div class="logo"><a href="index.html" style="text-decoration:none; color:inherit;">DE LA ROPA</a></div>
     <nav>
-      <a href="#">Products</a>
-      <a href="#">my account</a>
-      <a href="#">shopping cart</a>
+      <a href="Product.html">Products</a>
+      <a href="profile.html">My Account</a>
+      <a href="wishlist.html">Wishlist</a>
+      <a href="history.html">History</a>
+      <a href="signin.html">Sign In</a>
     </nav>
   </header>
 
