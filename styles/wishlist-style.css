@@ -180,14 +180,6 @@ body {
     align-items: flex-end;
 }
 
-.coupon-section {
-    display: flex;
-    gap: 10px;
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 20px;
-}
-
 .coupon-section input {
     flex-grow: 1;
     padding: 10px;
@@ -240,32 +232,22 @@ body {
     gap: 10px;
 }
 
-.checkout-btn, .paypal-btn {
+.checkout-btn{
     width: 100%;
     padding: 15px;
     border-radius: 4px;
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
-}
-
-.checkout-btn {
     background-color: #fff;
     border: 1px solid #333;
     color: #333;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.paypal-btn {
-    background-color: #ffc439;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-}
-
-.paypal-btn img {
-    height: 20px;
+.checkout-btn:hover {
+  background-color: #333;
+  color: #fff;
 }
 
 @keyframes scroll-left {
