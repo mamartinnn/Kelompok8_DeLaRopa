@@ -228,6 +228,22 @@ body {
   color: #fff;
 }
 
+.footer-links {
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
 @media (min-width: 992px) {
     .produk-container {
         grid-template-columns: repeat(4, 1fr);
