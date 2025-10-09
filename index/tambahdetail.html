@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De La Rropa - Edit Produk</title>
+    <link rel="stylesheet" href="/styles/tambahdetail.css">
+</head>
+<body>
+    <header class="main-header">    
+        <a href="index.html" class ="header-logo">De la ropa </a>
+        <nav class="nav-mid">
+         <ul>
+             <li><a href="Product.html">Products</a></li>
+         </ul>
+        </nav>
+        <nav class ="nav-right">
+             <ul>
+                 <li><a href="profile.html">my account </a></li>
+                 <li><a href="wishlist.html">shopping cart</a></li>
+             </ul>
+        </nav>
+    </header>
+
+    <div class="announcement-bar">
+        <div class="scroll-text">Free Shipping to Indonesia + Singapore!</div>
+    </div>
+
+    <main class="detail-container">
+        <div class="product-gallery">
+            <input type="radio" name="slider-radio" id="slide1" checked>
+            <input type="radio" name="slider-radio" id="slide2">
+            <input type="radio" name="slider-radio" id="slide3">
+            <input type="radio" name="slider-radio" id="slide4">
+            
+            <div class="product-images">
+                <img src="../images/baju-a.png" alt="Product Image 1">
+                <img src="../images/baju-a.png" alt="Product Image 2">
+                <img src="../images/baju-a.png" alt="Product Image 3">
+                <img src="../images/baju-a.png" alt="Product Image 4">
+            </div>
+            
+            <div class="image-slider-nav">
+                <label for="slide1" class="nav-dot"><span class="sr-only">Go to Image 1</span></label>
+                <label for="slide2" class="nav-dot"><span class="sr-only">Go to Image 2</span></label>
+                <label for="slide3" class="nav-dot"><span class="sr-only">Go to Image 3</span></label>
+                <label for="slide4" class="nav-dot"><span class="sr-only">Go to Image 4</span></label>
+            </div>
+            
+            <div class="admin-upload-section">
+                <label for="imageUpload">Tambah Gambar Baru:</label>
+                <input type="file" id="imageUpload" name="imageUpload" accept="image/*" multiple>
+                <button class="upload-btn">Upload</button>
+            </div>
+        </div>
+        <div class="product-info">
+            <h2 contenteditable="true">BAJU A</h2>
+            
+            <div class="price-container">
+                <div class="price-item">
+                    <h3>Harga Diskon</h3>
+                    <p class="price">
+                        <span>IDR</span><span contenteditable="true">450000</span>
+                    </p>
+                </div>
+                <div class="price-item">
+                    <h3>Harga Asli</h3>
+                    <p class="original-price">
+                        <span>IDR</span><span contenteditable="true">699000</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="size-selection">
+                <h3>Ukuran & Stok</h3>
+                <div class="size-buttons">
+                    <div class="size-stock-item">
+                        <span class="size-tag">S</span>
+                        <span class="stock-count" contenteditable="true">150</span>
+                    </div>
+                    <div class="size-stock-item">
+                        <span class="size-tag">M</span>
+                        <span class="stock-count" contenteditable="true">210</span>
+                    </div>
+                    <div class="size-stock-item">
+                        <span class="size-tag">L</span>
+                        <span class="stock-count" contenteditable="true">125</span>
+                    </div>
+                    <div class="size-stock-item">
+                        <span class="size-tag">XL</span>
+                        <span class="stock-count" contenteditable="true">80</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-description">
+                <h3 contenteditable="true">Material & Care</h3>
+                <p contenteditable="true">Terbuat dari 100% premium combed cotton yang lembut dan sejuk. Cuci dengan mesin menggunakan air dingin, jangan gunakan pemutih, dan setrika dengan suhu rendah.</p>
+            </div>
+            
+            <button class="add-to-cart">Save Changes</button>
+
+        </div>
+    </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <h2>De La Ropa</h2>
+      <p>Your one-stop-shop for fashionable clothing</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+      </div>
+      <p class="copyright">&copy; 2025 De La Ropa. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    window.addEventListener('scroll', function () {
+      const footer = document.querySelector('.featured-products');
+      if (footer) {
+        const rect = footer.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+          footer.classList.add('show');
+        }
+      }
+    });
+  </script>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      const footer = document.querySelector('.footer');
+      if (footer) {
+        const rect = footer.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+          footer.classList.add('show');
+        }
+      }
+    });
+  </script>
+
+  <script>
+    const fadeSections = document.querySelectorAll('.fade-section');
+
+    function checkFade() {
+      fadeSections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          section.classList.add('show');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkFade);
+    window.addEventListener('load', checkFade);
+  </script>
+
+
+  <script src="../script/script.js"></script>
+  <script>
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    };
+  </script>
+  
+</body>
+</html>
